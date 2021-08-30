@@ -2,15 +2,12 @@ import { Controller } from "stimulus"
 
 export default class extends Controller {
   static targets = [ "button" ];
-  //let currentColor;
   connect() {
       this.currentColor ="bg-pink-800";
-      this.buttonTarget.classList.add(this.currentColor);
-      this.buttonTarget.classList.add("text-white");
   }
   clicked() {
     this.buttonTarget.classList.remove(this.currentColor);
-    var colorArray = [
+    let colorArray = [
       'gray',
       'red',
       'yellow',
@@ -20,7 +17,7 @@ export default class extends Controller {
       'purple',
       'pink'
     ];
-    var randomNumber = Math.floor(Math.random()*colorArray.length);
+    let randomNumber = Math.floor(Math.random()*colorArray.length);
     this.currentColor=`bg-${colorArray[randomNumber]}-800`;
     this.buttonTarget.classList.add(this.currentColor);
 }
