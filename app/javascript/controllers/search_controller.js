@@ -15,19 +15,21 @@ export default class extends Controller {
     {
         console.log(this.inputTarget.innerText);
     }
+    this.display;
   }
   display(){
-      alert(this.resultTargets[0]);
-      this.resultTargets.forEach(element => {
-        this.element.classList.add("hidden");
-          });
+      alert(this.resultTargets);
   }
   mark(){
-    alert(this.resultTargets);
-      this.resultTargets[0].classList.add("bg-purple-600");
-      this.resultTargets.forEach(element => {
-        this.element.classList.add("hidden");
+    alert(this.resultTargets.length);
+      //this.resultTargets[2].classList.add("bg-purple-600");
+     this.resultTargets.forEach(element => {
+        this.element.classList.add("bg-purple-600");
           });
+    for (let a=0; a<=this.resultTargets.length; a++)
+    {
+        this.resultTargets[a].classList.add("bg-purple-600");
+    }
   }
 
 }
